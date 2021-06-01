@@ -1,0 +1,111 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-print-color-adjust: exact !important;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+
+/*
+ * Custom colours
+ */
+:root {
+  --main-color: #2196f3;
+  --alt-color: #f74470;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.text-alt {
+  color: var(--alt-color);
+}
+
+.bg-alt {
+  background-color: var(--alt-color);
+}
+
+/*
+ * Printing page break.
+ */
+.page-break {
+  page-break-before: always;
+}
+
+/*
+ * z-index helper
+ */
+.z-index-1000 {
+  z-index: 1000;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition-timing-function: ease;
+  transition-duration: .35s;
+  transition-property: height;
+}
+
+.collapsing.width {
+  width: 0;
+  height: auto;
+  transition-property: width;
+}
+
+/*
+ * Work Items
+ */
+.img.cover, img.cover {
+  object-fit: cover;
+}
+
+.work-item {
+  height: 30rem;
+}
+
+.work-items .work-item img {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.work-items .work-item:hover .img {
+  opacity: 0.5;
+}
+
+.work-items .work-item:hover .main-text {
+  top: 0%;
+}
+
+.work-items .work-item .main-text {
+  top: -60%;
+  transition: top 0.2s ease-in-out;
+}
+
+.work-items .work-item .sub-text {
+  bottom: -60%;
+  transition: bottom 0.2s ease-in;
+}
+
+.work-items .work-item:hover .sub-text {
+  bottom: 0%;
+}
